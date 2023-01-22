@@ -3,7 +3,7 @@ import './movies.css'
 import {faSearch, faStar, faPlus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-export const MovieCard = ({poster_path,title,release_date,vote_average}) => {
+export const MovieCard = ({poster_path,title,release_date,vote_average,first_air_date}) => {
     const bannerUrl = `https://www.themoviedb.org/t/p/w220_and_h330_face${poster_path}`
     return(
         <li className="movieCard" >
@@ -17,7 +17,9 @@ export const MovieCard = ({poster_path,title,release_date,vote_average}) => {
                         <FontAwesomeIcon icon={faStar}/>
                     </div>
                     <span className="subra fw-bold ms-2">Release:</span>
-                    <span className="sub fw-bold ms-2">{release_date}</span>
+                    {release_date ?  (<span className="sub fw-bold ms-2">{release_date}</span>) :
+                        <span className="sub fw-bold ms-2">{first_air_date}</span>
+                    }
                     <button className="follow fw-bold mt-1"> Add to WatchList</button>
                 </div>
             </div>
