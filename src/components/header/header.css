@@ -75,6 +75,7 @@ header {
     outline: none;
     background: none;
     padding: 5px 20px 5px 20px;
+    border-radius: 5px;
 }
 
 .links2 {
@@ -94,4 +95,5 @@ header {
     outline: none;
     padding: 5px 20px 5px 20px;
     box-shadow: rgba(1, 238, 151, 0.7) 0px 0.5px 4px;
+    border-radius: 5px;
 }
