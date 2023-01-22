@@ -1,0 +1,97 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    position: relative;
+}
+
+.banner img {
+    object-fit: cover;
+    width: 80%;
+    height: 490px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.check {
+    position: absolute;
+    left: 200px;
+    top: 375px;
+    border-radius: 12px;
+    outline: none;
+    padding: 2px 6px 2px 6px;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.check:hover {
+    animation: pulse 1s infinite;
+    transition: .3s;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.subtitle {
+    top: 250px;
+    left: 200px;
+    position: absolute;
+    width: 350px;
+    color: white;
+    text-shadow: 1px 1px 1px #919191;
+}
+.banner .title {
+    top: 100px;
+    left: 200px;
+    position: absolute;
+    width: 350px;
+    font-size: 60px;
+    color: white;
+    text-shadow: 1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191,
+    1px 3px 1px #919191,
+    1px 3px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 4px 6px rgba(16,16,16,0.4),
+    1px 5px 10px rgba(16,16,16,0.2),
+    1px 6px 35px rgba(16,16,16,0.2),
+    1px 7px 60px rgba(16,16,16,0.4);
+    letter-spacing: -4px;
+}
+
+.banRating span{
+    position: absolute;
+    color: white;
+    left: 335px;
+    top: 378px;
+    text-shadow: 1px 1px 1px #919191;
+}
+
+.banRating svg {
+    position: absolute;
+    color: white;
+    left: 385px;
+    top: 382px;
+    color: #ffa54e;
+    text-shadow: 1px 1px 1px black;
+}
