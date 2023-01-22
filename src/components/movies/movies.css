@@ -11,10 +11,7 @@
     position: relative;
 }
 
-.card img {
-    width: 220px;
-    height: 330px;
-}
+
 
 ul.upcoming {
     padding: 0;
@@ -23,25 +20,39 @@ ul.upcoming {
 .movieCard {
     display: flex;
     flex-direction: column;
-    width: 220px;
-    height: 330px;
-}
-
-.movieCard span {
-    width: 220px;
-    word-break: break-word;
-}
-
-li.movieCard img {
-    border-radius: 5px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #242a38;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
     transition: transform .2s;
 }
 
-li.movieCard img:hover {
+.movieCard:hover {
     transform: scale(1.02);
     box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
-    opacity: 90%;
+}
+
+.movieCard a {
+    color: #242a38;
+    margin-top: 0.2em;
+    word-break: break-word;
+    text-decoration: none;
+}
+
+.movieCard a:hover {
+    color: #242a38;
+    text-decoration: underline;
+}
+
+li.movieCard img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+li.movieCard img:hover {
+    -webkit-filter: brightness(80%);
 }
 
 li.movieCard {
@@ -52,4 +63,31 @@ li.movieCard {
 .uptitle {
     border-left: 4px solid #01ee97;
     padding-left: 0.4em;
+}
+
+.space {
+    display: flex;
+    flex-direction: column;
+}
+
+.showRating span {
+    margin: 0;
+    margin-right: 0.2em;
+}
+
+.showRating svg {
+    color: #ffa54e;
+}
+
+.movieCard span {
+    margin: 0;
+}
+
+.rat {
+    align-items: center;
+}
+.showRating {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
 }

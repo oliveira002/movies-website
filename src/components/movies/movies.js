@@ -17,7 +17,7 @@ export const Movies = () => {
     const getTrending = async(url) => {
         const res = await fetch(url);
         const data = await res.json();
-        setTrending(data.results.slice(0,5));
+        setTrending(data.results.slice(0,6));
     }
 
     useEffect(() => {
@@ -30,9 +30,15 @@ export const Movies = () => {
 
     return(
         <div className="list">
-            <span className="h4 fw-bold mt-3 mb-2 uptitle">Upcoming Movies</span>
+            <span className="h4 fw-bold mt-4 uptitle">Upcoming Movies</span>
             <ul className="upcoming">
                 {upComing.map((movie,index) => {
+                    return <MovieCard key = {index} {...movie}/>
+                })}
+            </ul>
+            <span className="h4 fw-bold mt-4 uptitle">Trending Movies</span>
+            <ul className="upcoming">
+                {trending.map((movie,index) => {
                     return <MovieCard key = {index} {...movie}/>
                 })}
             </ul>

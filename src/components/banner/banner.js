@@ -20,7 +20,7 @@ export const Banner = () => {
     const bannerUrl = `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${popular.backdrop_path}`
 
     return(
-        <div className="banner mt-5">
+        <div className="banner mt-4">
             <div className="bannerText">
                 <span className="title fw-bold h2">{popular.original_title}</span>
                 <span className="subtitle fw-bold h6">{popular.overview}</span>
