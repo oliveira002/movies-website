@@ -20,13 +20,17 @@ export const Banner = () => {
     const bannerUrl = `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${popular.backdrop_path}`
 
     return(
-        <div className="banner">
-            <span className="title fw-bold h2">{popular.original_title}</span>
-            <span className="subtitle fw-bold h6">{popular.overview}</span>
-            <button className="check"> Check it out! <FontAwesomeIcon icon={faArrowRight}/></button>
-            <div className="d-flex banRating">
-                <span className="fw-bold"> {popular.vote_average}/10</span>
-                <FontAwesomeIcon icon={faStar}/>
+        <div className="banner mt-5">
+            <div className="bannerText">
+                <span className="title fw-bold h2">{popular.original_title}</span>
+                <span className="subtitle fw-bold h6">{popular.overview}</span>
+                <div className="d-flex">
+                    <button className="check"> Check it out! <FontAwesomeIcon icon={faArrowRight}/></button>
+                    <div className="d-flex banRating">
+                        <span className="fw-bold"> {popular.vote_average}/10</span>
+                        <FontAwesomeIcon icon={faStar}/>
+                    </div>
+                </div>
             </div>
             <img src={bannerUrl}/>
         </div>
