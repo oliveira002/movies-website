@@ -35,7 +35,7 @@ export const Movies = () => {
     }
 
     useEffect(() => {
-        const upComingURL = "https://api.themoviedb.org/3/movie/upcoming?api_key=8e5744e35da67d3a15a61f0beb1c2a64&language=en-US&page=1";
+        const upComingURL = "https://api.themoviedb.org/3/movie/top_rated?api_key=8e5744e35da67d3a15a61f0beb1c2a64&language=en-US&page=1";
         getUpComing(upComingURL);
         const trending2 = "https://api.themoviedb.org/3/movie/popular?api_key=8e5744e35da67d3a15a61f0beb1c2a64&language=en-US&page=1";
         getTrending(trending2);
@@ -48,7 +48,7 @@ export const Movies = () => {
 
     return(
         <div className="list">
-            <span className="h4 fw-bold mt-4 uptitle">Upcoming Movies</span>
+            <span className="h4 fw-bold mt-4 uptitle">Top Rated Movies</span>
             <ul className="upcoming">
                 {upComing.map((movie,index) => {
                     return <MovieCard key = {index} {...movie}/>
@@ -60,15 +60,15 @@ export const Movies = () => {
                     return <MovieCard key = {index} {...movie}/>
                 })}
             </ul>
-            <span className="h4 fw-bold mt-4 uptitle">Trending TV Shows</span>
-            <ul className="upcoming">
-                {trendingShows.map((movie,index) => {
-                    return <MovieCard key = {index} {...movie}/>
-                })}
-            </ul>
             <span className="h4 fw-bold mt-4 uptitle">Top Rated TV Shows</span>
             <ul className="upcoming">
                 {upComingShows.map((movie,index) => {
+                    return <MovieCard key = {index} {...movie}/>
+                })}
+            </ul>
+            <span className="h4 fw-bold mt-4 uptitle">Trending TV Shows</span>
+            <ul className="upcoming">
+                {trendingShows.map((movie,index) => {
                     return <MovieCard key = {index} {...movie}/>
                 })}
             </ul>
