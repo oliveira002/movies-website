@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './movies.css'
-import {faSearch, faStar} from "@fortawesome/free-solid-svg-icons";
+import {faSearch, faStar, faPlus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export const MovieCard = ({poster_path,title,release_date,vote_average}) => {
@@ -8,15 +8,17 @@ export const MovieCard = ({poster_path,title,release_date,vote_average}) => {
     return(
         <li className="movieCard" >
             <img src={bannerUrl}/>
-            <div className="space ms-1">
-                <span className="fw-bold h5 mt-2"> Title</span>
-                <a href="#" className="fw-light h5">{title}</a>
-                <div className="d-flex showRating">
-                    <span className="fw-bold h5"> Rating</span>
-                    <div className="d-flex rat">
-                        <span className="fw h5 me-1">{vote_average}</span>
+            <div className="space mt-2">
+                <a href="#" className="fw-bold h6 ms-2">{title}</a>
+                <div className="d-flex tudo">
+                    <span className="subra fw-bold ms-2">Rating:</span>
+                    <div className="d-flex rat ms-2">
+                        <span className="sub fw-bold">{vote_average}</span>
                         <FontAwesomeIcon icon={faStar}/>
                     </div>
+                    <span className="subra fw-bold ms-2">Release:</span>
+                    <span className="sub fw-bold ms-2">{release_date}</span>
+                    <button className="follow fw-bold mt-1"> Add to WatchList</button>
                 </div>
             </div>
         </li>
