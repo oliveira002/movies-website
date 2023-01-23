@@ -90,10 +90,43 @@ header {
 
 .register {
     color: #1b1d23;
-    background: #01ee97;
+    background: #FF4B2B;
     border: none;
     outline: none;
     padding: 5px 20px 5px 20px;
-    box-shadow: rgba(1, 238, 151, 0.7) 0px 0.5px 4px;
+    box-shadow: #FF4B2B 0px 0.5px 4px;
     border-radius: 5px;
+}
+
+.titlelogin {
+    border-left: 3px solid #FF4B2B;
+    padding-left: 10px;
+}
+
+.mypopup input{
+    background-color: #eee;
+    border: none;
+    padding: 8px 10px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.mypopup input:focus {
+    outline: none;
+    border: none;
+}
+.mypopup button.log {
+    align-self: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    background: #FF4B2B;
+    width: 9em;
+    padding: 8px 8px 8px 8px;
+    box-shadow: rgba(255, 75, 43, 0.67) 0px 0.5px 4px;
+}
+
+.mypopup button.log:hover {
+    opacity: 80%;
 }

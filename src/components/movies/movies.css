@@ -61,7 +61,7 @@ li.movieCard {
 }
 
 .uptitle {
-    border-left: 4px solid #44b9a3;
+    border-left: 4px solid #FF4B2B;
     padding-left: 0.4em;
 }
 
@@ -121,7 +121,7 @@ li.movieCard {
 }
 
 .follow {
-    background-color: #44b9a3;
+    background-color: #FF4B2B;
     border-radius: 4px;
     color: #fff;
     overflow: hidden;

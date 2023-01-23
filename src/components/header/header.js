@@ -2,6 +2,9 @@ import React from "react";
 import './header.css'
 import {faSearch, faUser} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import Popup from "reactjs-popup";
+import 'reactjs-popup/dist/index.css';
+import BasicModal from "./login";
 
 export const Header = () => {
     return(
@@ -22,12 +25,9 @@ export const Header = () => {
                 <div className = "d-flex">
                     <ul className = "links2">
                         <li>
-                            <button className="login">
-                                <FontAwesomeIcon className="me-2 lupa" icon={faUser}/>
-                            Login
-                            </button>
+                            <BasicModal name='Login' class='login'/>
                         </li>
-                        <li> <button className="register fw-bold">Get Started</button></li>
+                        <li> <BasicModal name='Get Started' class='register'/></li>
                     </ul>
                 </div>
             </header>
