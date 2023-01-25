@@ -5,6 +5,8 @@ import axios from "axios";
 import {Banner} from "../components/banner/banner";
 import {Movies} from "../components/movies/movies";
 const Home = () => {
+    axios.default.withCredentials = true;
+
     return (
         <div className="home">
             <Header/>

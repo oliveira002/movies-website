@@ -23,7 +23,6 @@ const style = {
 
 export default function BasicModal(props) {
     Axios.defaults.withCredentials = true;
-    const [loggedIn, setLoggedIn] = useState(false);
     const [error,setError] = useState("");
     const [errorL,setErrorL] = useState("");
     const [open, setOpen] = useState(false);
@@ -36,9 +35,11 @@ export default function BasicModal(props) {
         Axios.get("http://localhost:3001/login")
     },[])
 
-    async function register() {
+    async function register(e) {
+        e.preventDefault();
         try {
             const response = await Axios.post('http://localhost:3001/register', { username: userReg, password: pwReg });
+            window.location.reload();
         } catch (error) {
             if (error.response.status === 400) {
                 setError(error.response.data.error);
@@ -49,9 +50,11 @@ export default function BasicModal(props) {
         }
     }
 
-    async function login() {
+    async function login(e) {
+        e.preventDefault();
         try {
             const response = await Axios.post('http://localhost:3001/login', { username: userReg, password: pwReg  });
+            window.location.reload();
         } catch (error) {
             if (error.response) {
                 if (error.response.status === 401) {
@@ -83,14 +86,14 @@ export default function BasicModal(props) {
                 {props.name === 'Login' ?
                     <Modal className = "mypopup" open={open} onClose={handleClose}>
                         <Box sx={style}>
-                            <div className="d-flex flex-column">
+                            <form className="d-flex flex-column" onSubmit={login}>
                                 <span className="h3 titlelogin"> Login </span>
                                 <span className="h5 align-self-center mt-2"> {errorL}</span>
                                 <input type="text" onChange={(e) => {setUserReg(e.target.value)}} placeholder="Username" name="username"/>
                                 <input type="password" onChange={(e) => {setPwReg(e.target.value)}} placeholder="Password" name="password"/>
                                 <span className="align-self-center mb-2"> Forgot your password? </span>
-                                <button className="log" onClick={login}> Login </button>
-                            </div>
+                                <button className="log" type="submit"> Login </button>
+                            </form>
                         </Box>
                     </Modal>
                     :

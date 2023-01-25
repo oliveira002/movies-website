@@ -7,6 +7,7 @@ const bcrypt = require("bcrypt");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
+const cookieSession = require("cookie-session");
 
 const saltRounds = 10;
 
@@ -20,15 +21,14 @@ app.use(cors({
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(session({
-    key: "id",
-    secret: "subscribe",
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        expires: 60 * 60 * 2,
-    },
-}))
+
+
+app.use(cookieSession({
+    name: "session",
+    keys: ["signingKey","encryptionKey"],
+    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}));
+
 
 const db = mariadb.createPool({
     host: 'localhost',
@@ -49,6 +49,7 @@ app.post('/register', async (req, res) => {
         }
         // Insert the new user into the database
         await db.query("INSERT INTO users (username,password) VALUES (?,?)", [username, hashed]);
+        req.session.user = username;
         res.status(201).send({ error: 'User registered successfully' });
     } catch (err) {
         res.status(500).send({ error: 'An error occurred while registering the user' });
@@ -63,7 +64,8 @@ app.post('/login', async (req, res) => {
         const user = await db.query("SELECT * FROM users WHERE username = ? ", [username]);
         if (user.length > 0) {
             if(await bcrypt.compare(password,user[0].password)) {
-                req.session.user = user;
+                req.session.user = user[0].username;
+                console.log(req.session.user);
                 res.status(200).send({ error: 'Login successful' });
             }
             else {
@@ -85,5 +87,24 @@ app.get("/login",(req,res) => {
     else {
         res.send({loggedIn: false})
     }
-})
+});
+
+app.get("/register",(req,res) => {
+    if(req.session.user) {
+        res.send({loggedIn: true, user: req.session.user})
+    }
+    else {
+        res.send({loggedIn: false})
+    }
+});
+
+app.delete('/logout', async (req, res) => {
+    try {
+        req.session = null;
+        res.status(200).send({ message: 'Logout successful' });
+    } catch (err) {
+        return res.status(500).send({ error: 'An error occurred while logging out' });
+    }
+});
+
 app.listen(3001,'localhost');
