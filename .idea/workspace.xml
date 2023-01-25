@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c7bc259-8e67-42a8-bc22-fba331441c73" name="Changes" comment="Sessions Done">
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/banner/banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/banner/banner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/banner/banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/banner/banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/movie.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/movie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/movie.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +36,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/oliveira/Desktop/oliveira/movies/client/src/components&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -39,6 +45,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,6 +62,8 @@
       <workItem from="1674573328656" duration="305000" />
       <workItem from="1674661096425" duration="810000" />
       <workItem from="1674662590593" duration="14000" />
+      <workItem from="1674662609660" duration="6952000" />
+      <workItem from="1674681059892" duration="7846000" />
     </task>
     <task id="LOCAL-00001" summary="Login / Register Done">
       <created>1674500306333</created>

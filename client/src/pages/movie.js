@@ -2,13 +2,37 @@ import React, {useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
 import './movie.css';
 import {Header} from "../components/header/header";
+import {MovieBg} from "../components/moviebg/moviebg";
 import axios from "axios";
 const Movie = () => {
-    axios.default.withCredentials = true;
+    const {id} = useParams();
+    const [filme,setFilme] = useState([]);
+    const [cast,setCast] = useState([]);
+
+    const getMovie = async(url) => {
+        const res = await fetch(url);
+        const data = await res.json();
+        setFilme(data);
+    }
+
+    const getCast = async(url) => {
+        const res = await fetch(url);
+        const data = await res.json();
+        setCast(data);
+    }
+
+    useEffect(() => {
+        const movieURL = `https://api.themoviedb.org/3/movie/${id}?api_key=8e5744e35da67d3a15a61f0beb1c2a64&language=en-US`;
+        getMovie(movieURL);
+        const castURL = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=8e5744e35da67d3a15a61f0beb1c2a64&language=en-US`;
+        getCast(castURL);
+
+    },[])
 
     return (
-        <div className="movie">
+        <div>
             <Header/>
+            <MovieBg {...filme}/>
         </div>
     );
 };
