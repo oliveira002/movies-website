@@ -61,7 +61,7 @@ li.movieCard {
 }
 
 .uptitle {
-    border-left: 4px solid #FF4B2B;
+    border-left: 4px solid #ffc32b;
     padding-left: 0.4em;
 }
 
@@ -82,7 +82,7 @@ li.movieCard {
 
 .rat svg {
     font-size: 12px;
-    color: #ffa54e;
+    color: #ffc32b;
     margin-bottom: 2px;
     margin-left: 2px;
 }
@@ -121,7 +121,7 @@ li.movieCard {
 }
 
 .follow {
-    background-color: #FF4B2B;
+    background-color: #ffc32b;
     border-radius: 4px;
     color: #fff;
     overflow: hidden;

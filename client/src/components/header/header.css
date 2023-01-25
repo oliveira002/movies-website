@@ -90,16 +90,16 @@ header {
 
 .register {
     color: #1b1d23;
-    background: #FF4B2B;
+    background: #ffc32b;
     border: none;
     outline: none;
     padding: 5px 20px 5px 20px;
-    box-shadow: #FF4B2B 0px 0.5px 4px;
+    box-shadow: #ffc32b 0px 0.5px 4px;
     border-radius: 5px;
 }
 
 .titlelogin {
-    border-left: 3px solid #FF4B2B;
+    border-left: 3px solid #ffc32b;
     padding-left: 10px;
 }
 
@@ -121,10 +121,10 @@ header {
     font-weight: bold;
     border-radius: 20px;
     border: none;
-    background: #FF4B2B;
+    background: #ffc32b;
     width: 9em;
     padding: 8px 8px 8px 8px;
-    box-shadow: rgba(255, 75, 43, 0.67) 0px 0.5px 4px;
+    box-shadow: rgba(255, 206, 43, 0.67) 0px 0.5px 4px;
 }
 
 .mypopup button.log:hover {

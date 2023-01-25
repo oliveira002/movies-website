@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/home';
+import Movie from './pages/movie';
 import Axios from "axios";
 import UserContext from './components/context/usercontext'
 import React from 'react';
@@ -31,6 +32,7 @@ class App extends React.Component {
                 <UserContext.Provider value={this.state.user}>
                     <Routes>
                         <Route exact path='/' exact element={<Home />} />
+                        <Route exact path='movie/:id' exact element={<Movie />} />
                     </Routes>
                 </UserContext.Provider>
             </Router>
