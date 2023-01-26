@@ -146,14 +146,14 @@ li.movieCard {
 
 
 .favbutton {
-    border-radius: 12px;
+    background: #242a38;
     outline: none;
-    padding: 2px 6px 2px 6px;
-    background: none;
+    padding: 4px 16px 4px 16px;
     color: white;
-    border: 2px solid white;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border: none;
     transition: transform .2s;
+    border-radius: 4px;
 }
 
 .favbutton:hover {
@@ -162,4 +162,20 @@ li.movieCard {
 
 .favbutton svg {
     color: #ffc32b;
+}
+
+
+
+.ratingcircle {
+    opacity: 90%;
+    border-radius: 50%;
+    color: #ffc32b;
+    background: #242a38;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 228px;
+    top: 352px;
 }
