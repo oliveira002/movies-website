@@ -94,25 +94,25 @@
 
 .overText {
     display: flex;
-    flex-direction: column;
     position: absolute;
     z-index: 9999;
-    left: 34.5%;
-    top: 140px;
+    left: 35%;
+    top: 150px;
 }
 
 .movieBanner {
     display: flex;
     flex-direction: column;
     position: relative;
+    color: white;
 }
 
-.movieBanner img {
+.movieBanner img.bgg {
     object-fit: cover;
     width: 100%;
     height: 540px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    filter: brightness(60%);
+    filter: brightness(55%);
 }
 
 .titulo {
@@ -128,6 +128,7 @@
     display: flex;
     font-size: 18px;
     color: white;
+    margin: 0;
 }
 
 .movieBanner li {
@@ -142,3 +143,43 @@
     color: rgb(255 202 0 / 86%);
     text-shadow: .1em .1em 0 hsl(0, 0%, 18%);
 }
+
+.tag {
+    font-style: italic;
+    margin: 0;
+}
+
+.overview {
+    width: 740px;
+}
+
+img.posterpic {
+    position: absolute;
+    left: 20%;
+    top: 100px;
+    z-index: 9999;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    transition: transform .2s;
+}
+
+img.posterpic:hover {
+    transform: scale(1.02);
+}
+
+.check2 {
+    width: fit-content;
+    border-radius: 12px;
+    outline: none;
+    padding: 2px 6px 2px 6px;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: transform .2s;
+}
+
+.check2:hover {
+    transform: scale(1.02);
+}
+
