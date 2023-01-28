@@ -4,6 +4,8 @@ import './movie.css';
 import {Header} from "../components/header/header";
 import {MovieBg} from "../components/moviebg/moviebg";
 import axios from "axios";
+import { Cast } from '../components/cast/cast';
+import { CastList } from '../components/cast/castList';
 const Movie = () => {
     const {id} = useParams();
     const [filme,setFilme] = useState([]);
@@ -18,7 +20,8 @@ const Movie = () => {
     const getCast = async(url) => {
         const res = await fetch(url);
         const data = await res.json();
-        setCast(data);
+        setCast(data.cast);
+        console.log(data.cast);
     }
 
     useEffect(() => {
@@ -33,6 +36,7 @@ const Movie = () => {
         <div>
             <Header/>
             <MovieBg {...filme}/>
+            <CastList cast = {cast}/>
         </div>
     );
 };
