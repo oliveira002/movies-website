@@ -1,1 +1,1 @@
-~ website similar to imdb using react & tmdb api
+~ website similar to imdb using react, nodejs & tmdb api
