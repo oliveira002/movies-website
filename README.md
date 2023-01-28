@@ -1,1 +1,1 @@
-~ small react movies website project
+~ website similar to imdb using react & tmdb api
